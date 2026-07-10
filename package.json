@@ -1,10 +1,8 @@
 {
-    "name": "freecode",
-    "version": "1.0.0",
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        "dev:tui": "bun run --watch packages/tui/src/index.tsx"
-    }
+  "name": "freecode",
+  "version": "1.0.0",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev:cli": "bun run --watch packages/cli/src/index.tsx"
+  }
 }
