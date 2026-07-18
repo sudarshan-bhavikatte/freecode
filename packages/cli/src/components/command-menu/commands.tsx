@@ -1,3 +1,4 @@
+import { Select } from "@opentui/core";
 import type { Command } from "./types";
 
 export const COMMANDS: Command[] = [
@@ -17,9 +18,10 @@ export const COMMANDS: Command[] = [
     description: "Switch agents",
     value: "/agents",
     action : (ctx) => {
-      ctx.toast.show({
-        message : "Agent changed",
-        variant : "success"
+      ctx.dialog.open({
+        title : "Select Mode",
+        children : <text>Select an agent to switch to</text>,
+
       });
     }
   },
@@ -28,9 +30,9 @@ export const COMMANDS: Command[] = [
     description: "Select AI model for generation",
     value: "/models",
     action : (ctx) => {
-      ctx.toast.show({
-        message : "Model changed",
-        variant : "info"
+      ctx.dialog.open({
+        title : "Select Model",
+        children : <text>Select an AI model for generation</text>,  
       });
     }
   },
